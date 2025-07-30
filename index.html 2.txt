@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌱 Grow a Garden Shop</title>
+  <style>
+    :root {
+      --main-bg: #000000;
+      --accent-bg: #1a1a1a;
+      --border-color: #444;
+      --text-color: #f0f0f0;
+      --heading-color: #58f158;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--main-bg);
+      color: var(--text-color);
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: var(--heading-color);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: var(--heading-color);
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    .shop-section {
+      background-color: var(--accent-bg);
+      border: 2px dashed var(--border-color);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 700px;
+    }
+
+    .item-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #444;
+      font-size: 1.1em;
+    }
+
+    .item-list li:last-child {
+      border-bottom: none;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 40px 10px 10px;
+      font-size: 1em;
+      color: #666;
+    }
+
+    .contact-button {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 12px 20px;
+      background-color: #000000;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      text-align: center;
+      width: fit-content;
+      transition: background-color 0.3s;
+    }
+
+    .contact-button:hover {
+      background-color: #4752c4;
+    }
+
+    .cart-button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      background-color: #58f158;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .cart-button:hover {
+      background-color: #3fc13f;
+    }
+
+    /* Mobile-friendly */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .item-list li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .item-list li span:last-child {
+        margin-top: 4px;
+        font-weight: bold;
+      }
+
+      .shop-section {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌱 Grow a Garden Shop</h1>
+  <p style="text-align:center;">Best Pets & Sheckels for Sale!<br><strong>All Prices Negotiable!(doesn't mean that it's always a yes)</strong></p>
+
+  <div class="shop-section">
+    <h2>🐾 Pet Prices</h2>
+    <ul class="item-list">
+      <li><span>🪩 Disco Bee</span> <span>$8.50 <button class="cart-button" onclick="addToCart('Disco Bee', 8.50)">Add to Cart</button></span></li>
+      <li><span>🦕 Spinosaurus</span> <span>$7.50 <button class="cart-button" onclick="addToCart('Spinosaurus', 7.50)">Add to Cart</button></span></li>
+      <li><span>🦝 Raccoon</span> <span>$10 <button class="cart-button" onclick="addToCart('Raccoon', 10)">Add to Cart</button></span></li>
+      <li><span>🦅 Bald Eagle</span> <span>$1.00 <button class="cart-button" onclick="addToCart('Bald Eagle', 1.00)">Add to Cart</button></span></li>
+      <li><span>🐉 Dragonfly</span> <span>$6.50 <button class="cart-button" onclick="addToCart('Dragonfly', 6.50)">Add to Cart</button></span></li>
+      <li><span>👑 Queen Bee</span> <span>$7.50 <button class="cart-button" onclick="addToCart('Queen Bee', 7.50)">Add to Cart</button></span></li>
+      <li><span>🦋 Butterfly</span> <span>$8.25 <button class="cart-button" onclick="addToCart('Butterfly', 8.25)">Add to Cart</button></span></li>
+      <li><span>🐙 Mimic Octopus</span> <span>$6.30 <button class="cart-button" onclick="addToCart('Mimic Octopus', 6.30)">Add to Cart</button></span></li>
+      <li><span>🦊 Red Fox</span> <span>$4.00 <button class="cart-button" onclick="addToCart('Red Fox', 4.00)">Add to Cart</button></span></li>
+      <li><span>🏜️ Fennec Fox</span> <span>$9.00 <button class="cart-button" onclick="addToCart('Fennec Fox', 9.00)">Add to Cart</button></span></li>
+      <li><span>🦖 T-Rex</span> <span>$7.00 <button class="cart-button" onclick="addToCart('T-Rex', 7.00)">Add to Cart</button></span></li>
+      <li><span>🦊 Corrupt Kitsune</span> <span>$13.50 <button class="cart-button" onclick="addToCart('Corrupt Kitsune', 13.50)">Add to Cart</button></span></li>
+      <li><span>🎨 Custom Pet Orders</span> <span><em>Msg me! 💬</em></span></li>
+    </ul>
+  </div>
+
+  <div class="shop-section">
+    <h2>💰 Sheckel Shop</h2>
+    <ul class="item-list">
+      <li><span>1T</span> <span>$1.25 <button class="cart-button" onclick="addToCart('1T Sheckels', 1.25)">Add to Cart</button></span></li>
+      <li><span>750T</span> <span>$2.30 <button class="cart-button" onclick="addToCart('750T Sheckels', 2.30)">Add to Cart</button></span></li>
+      <li><span>1QD</span> <span>$3.50 <button class="cart-button" onclick="addToCart('1QD Sheckels', 3.50)">Add to Cart</button></span></li>
+      <li><span>12QD</span> <span>$10.50 <button class="cart-button" onclick="addToCart('12QD Sheckels', 10.50)">Add to Cart</button></span></li>
+      <li><span>🧮 Custom Amounts</span></li>
+    </ul>
+  </div>
+
+  <div class="shop-section">
+    <h2>🛒 Your Cart</h2>
+    <ul id="cart-items" class="item-list"></ul>
+    <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
+    <button class="cart-button" onclick="checkout()">Checkout</button>
+  </div>
+
+  <!-- Discord contact button -->
+  <a class="contact-button" href="https://discord.com/users/1226028987067662350" target="_blank">
+    💬 Contact Me on Discord
+  </a>
+
+  <div class="footer">
+    🌼 Thanks for visiting the Grow a Garden Shop! 🌼
+  </div>
+
+  <script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(item, price) {
+      cart.push({ item, price });
+      total += price;
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      cartItems.innerHTML = '';
+      cart.forEach(entry => {
+        const li = document.createElement('li');
+        li.textContent = `${entry.item} - $${entry.price.toFixed(2)}`;
+        cartItems.appendChild(li);
+      });
+
+      document.getElementById('cart-total').textContent = total.toFixed(2);
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+      let summary = cart.map(entry => `${entry.item} ($${entry.price.toFixed(2)})`).join('\n');
+      alert(`Thanks for your order!\n\nItems:\n${summary}\n\nTotal: $${total.toFixed(2)}`);
+      
+      cart = [];
+      total = 0;
+      updateCart();
+    }
+  </script>
+
+</body>
+</html>
